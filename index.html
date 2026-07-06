@@ -614,7 +614,7 @@
     document.getElementById('location-coords').textContent = '';
     document.getElementById('f-site').value = '';
     document.getElementById('f-address').value = '';
-    document.getElementById('f-inspector').value = '';
+    if(signedInAs && typeof lockPreparedByField === 'function'){ lockPreparedByField(); }
     document.getElementById('f-date').value = new Date().toISOString().slice(0,10);
     document.getElementById('f-overall-notes').value = '';
     document.getElementById('f-ref').textContent = generateRef();
